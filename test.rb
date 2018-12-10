@@ -7,7 +7,7 @@ client = NationBuilder::Client.new('aycc', ENV['NATIONBUILDER_APIKEY'], retries:
 puts "finding wants to vols"
 
 filter_wants_to_vol = {
-  tag: "wants%20to:%20volunteer%202018"
+  tag: "contacted:%202018"
   }
   
 wants_to_vol = client.call(:people_tags, :people, filter_wants_to_vol)
