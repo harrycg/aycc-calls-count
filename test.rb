@@ -8,6 +8,7 @@ puts "contacted organising"
 
 total_phone_calls=0
 total_phone_calls_after_jan=0
+unique_contacts=0
 
 filter_wants_to_vol = {
   tag: "contacted:%20organising"
@@ -168,18 +169,30 @@ puts "#{person_id_wants_to_vol} #{send_info_phone_call_after_jan.count} Send Inf
 #Total send_info calls - all time
    send_info_phone_call_total= send_info_phone_call_3.count
 
+total_phone_calls_after_jan_individual=answered_phone_call_after_jan.count+meaningful_phone_call_filtered.count+send_info_phone_call_after_jan.count+not_interested_phone_call_after_jan.count
 
+if total_phone_calls_after_jan_individual>0
+  unique_contacts_counter=1
+
+  else
   
+  unique_contacts_counter=0
+  
+end
+
+unique_contacts=unique_contacts+unique_contacts_counter
 
 total_phone_calls_after_jan=answered_phone_call_after_jan.count+meaningful_phone_call_filtered.count+send_info_phone_call_after_jan.count+not_interested_phone_call_after_jan.count+total_phone_calls_after_jan
 total_phone_calls=not_interested_phone_call_total+meaningful_phone_call_total+answered_phone_call_3.count+send_info_phone_call_total+total_phone_calls
-  
+
+
+
 end
 
 #puts "#{all_calls}"
 puts "total phone calls after JAN is #{total_phone_calls_after_jan}"
 puts "total phone calls is #{total_phone_calls}"
-
+puts "total unique contacts is #{unique_contacts}"
 
     
 #contacts_3.each do |contacts_4|
