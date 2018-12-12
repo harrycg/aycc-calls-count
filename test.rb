@@ -4,7 +4,7 @@ require 'nationbuilder'
 
 client = NationBuilder::Client.new('aycc', ENV['NATIONBUILDER_APIKEY'], retries: 8)
 
-puts "finding wants to vols"
+puts "contacted organising"
 
 total_phone_calls=0
 total_phone_calls_after_jan=0
@@ -40,7 +40,6 @@ answered_phone_call_1 = client.call(:contacts, :index, answered_phone_call)
   answered_phone_call_2 = NationBuilder::Paginator.new(client, answered_phone_call_1)
 
   jan_01_18= Date.parse('2018-01-01')
-puts "#{person_id_wants_to_vol} #{jan_01_18} yep" 
 
   
 answered_phone_call_3 = []
@@ -58,7 +57,7 @@ end
 end
 
   #Prints just phone calls after 01/01/2018
-puts "#{person_id_wants_to_vol} #{answered_phone_call_after_jan.count} Answered filtered"
+puts "#{person_id_wants_to_vol} #{answered_phone_call_after_jan.count} CAlled"
   
 
 total_phone_calls_after_jan=answered_phone_call_after_jan.count+total_phone_calls_after_jan
