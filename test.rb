@@ -7,6 +7,7 @@ client = NationBuilder::Client.new('harrycossar', ENV['NATIONBUILDER_APIKEY'], r
 puts "finding wants to vols"
 
 total_phone_calls=0
+total_phone_calls_after_jan=0
 
 filter_wants_to_vol = {
   tag: "contacted:%202018"
@@ -60,8 +61,9 @@ end
 puts "#{person_id_wants_to_vol} #{answered_phone_call_after_jan.count} Answered filtered"
   
 
-total_phone_calls=answered_phone_call_after_jan.count+total_phone_calls
-
+total_phone_calls_after_jan=answered_phone_call_after_jan.count+total_phone_calls_after_jan
+total_phone_calls=answered_phone_call_3.count+total_phone_calls
+  
 end
 
 #puts "#{all_calls}"
