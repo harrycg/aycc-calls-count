@@ -67,8 +67,8 @@ total_phone_calls=answered_phone_call_3.count+total_phone_calls
 end
 
 #puts "#{all_calls}"
+puts "total phone calls after JAN is #{total_phone_calls_after_jan}"
 puts "total phone calls is #{total_phone_calls}"
-  
 
 
     
