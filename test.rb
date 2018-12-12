@@ -60,7 +60,7 @@ end
 puts "#{person_id_wants_to_vol} #{answered_phone_call_after_jan.count} Answered filtered"
   
 
-total_phone_calls=answered_phone_call_after_jan+total_phone_calls
+total_phone_calls=answered_phone_call_after_jan.count+total_phone_calls
 
 end
 
