@@ -10,7 +10,7 @@ total_phone_calls=0
 total_phone_calls_after_jan=0
 
 filter_wants_to_vol = {
-  tag: "contacted:%202018"
+  tag: "contacted:%20organising"
   }
   
 wants_to_vol = client.call(:people_tags, :people, filter_wants_to_vol)
